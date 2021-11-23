@@ -19,6 +19,7 @@ namespace AngularEF.Models
         public DateTime CurrentCheckUpDate { get; set; }
 
         [Required]
+        [MaxLength(80)]
         public string RegistrationIdentifier { get; set; }
 
         /*reference properties Car*/

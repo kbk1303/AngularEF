@@ -110,7 +110,8 @@ namespace AngularEF.Migrations
 
                     b.Property<string>("RegistrationIdentifier")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasMaxLength(80)
+                        .HasColumnType("nvarchar(80)");
 
                     b.HasKey("RegistrationId");
 

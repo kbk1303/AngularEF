@@ -45,7 +45,7 @@ namespace AngularEF.Migrations
                         .Annotation("SqlServer:Identity", "1, 1"),
                     FirstDayRegistration = table.Column<DateTime>(type: "datetime2", nullable: false),
                     CurrentCheckUpDate = table.Column<DateTime>(type: "datetime2", nullable: false),
-                    RegistrationIdentifier = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    RegistrationIdentifier = table.Column<string>(type: "nvarchar(80)", maxLength: 80, nullable: false),
                     CarId = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>

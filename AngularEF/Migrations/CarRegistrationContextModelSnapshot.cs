@@ -89,6 +89,9 @@ namespace AngularEF.Migrations
 
                     b.HasKey("OwnerId");
 
+                    b.HasIndex("cpr")
+                        .IsUnique();
+
                     b.ToTable("Owners");
                 });
 

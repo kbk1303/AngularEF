@@ -114,6 +114,12 @@ namespace AngularEF.Migrations
                 column: "RegistrationId");
 
             migrationBuilder.CreateIndex(
+                name: "IX_Owners_cpr",
+                table: "Owners",
+                column: "cpr",
+                unique: true);
+
+            migrationBuilder.CreateIndex(
                 name: "IX_Registrations_CarId",
                 table: "Registrations",
                 column: "CarId",

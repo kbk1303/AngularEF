@@ -10,7 +10,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace AngularEF.Migrations
 {
     [DbContext(typeof(CarRegistrationContext))]
-    [Migration("20211123183041_CarRegMigration")]
+    [Migration("20211123184602_CarRegMigration")]
     partial class CarRegMigration
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -90,6 +90,9 @@ namespace AngularEF.Migrations
                         .HasColumnType("nvarchar(11)");
 
                     b.HasKey("OwnerId");
+
+                    b.HasIndex("cpr")
+                        .IsUnique();
 
                     b.ToTable("Owners");
                 });
